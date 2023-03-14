@@ -51,11 +51,12 @@ FROM [Shark Tank dataset]
 
 SELECT 
 Industry, 
-SUM([Got Deal]) AS [No.Of Deals] 
+SUM([Got Deal]) AS [No.Of Deals],
+SUM([Investment Amount Per Shark]) AS [Amount Invested]
 FROM [Shark Tank dataset]
 WHERE [Got Deal] = 1
 GROUP BY Industry 
-ORDER BY [No.Of Deals]
+ORDER BY [Amount Invested]desc
 
 /*SEASON WITH THE MOST GOT DEALS*/
 
